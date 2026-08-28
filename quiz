@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 7 Science Quiz</title>
+    <style>
+        *{box-sizing:border-box;font-family:'Segoe UI',sans-serif;margin:0;padding:0;}
+        body{background:#f0f8ff;padding:20px;max-width:900px;margin:0 auto;}
+        .container{background:white;padding:30px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+        h1{text-align:center;color:#2c3e50;margin-bottom:25px;}
+        .name-section{margin-bottom:25px;padding:15px;background:#e8f4f8;border-radius:8px;}
+        input[type="text"]{width:100%;padding:10px;margin-top:8px;border:2px solid #3498db;border-radius:6px;font-size:16px;}
+        .question{margin:20px 0;padding:15px;border-bottom:1px solid #eee;}
+        .question p{font-weight:600;margin-bottom:10px;color:#34495e;}
+        .options{margin-left:15px;}
+        .option{margin:8px 0;cursor:pointer;}
+        input[type="radio"]{margin-right:8px;}
+        .truefalse{margin-left:15px;}
+        button{background:#27ae60;color:white;border:none;padding:12px 25px;font-size:18px;border-radius:8px;cursor:pointer;width:100%;margin-top:20px;font-weight:bold;}
+        button:hover{background:#219653;}
+        .result{margin-top:25px;padding:20px;border-radius:8px;display:none;}
+        .student-results{margin-top:30px;padding:20px;background:#fff3cd;border-radius:8px;}
+        .admin-note{background:#ffebee;padding:12px;border-radius:6px;margin-bottom:15px;color:#c62828;}
+        .score-entry{padding:8px 0;border-bottom:1px dashed #ccc;}
+        .hidden{display:none !important;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Grade 7 Science Quiz (30 Items)</h1>
+
+        <!-- STUDENT SECTION -->
+        <div id="quiz-area">
+            <div class="name-section">
+                <label><strong>Student Full Name:</strong></label>
+                <input type="text" id="student-name" placeholder="Enter your name here...">
+            </div>
+
+            <p><em>Instructions: Choose the best answer for each question. Click Submit when finished.</em></p>
+
+            <!-- QUESTIONS 1-25: Multiple Choice -->
+            <div class="question">
+                <p>1. What is the basic unit of matter?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q1" value="A"> A. Atom</label>
+                    <label class="option"><input type="radio" name="q1" value="B"> B. Molecule</label>
+                    <label class="option"><input type="radio" name="q1" value="C"> C. Cell</label>
+                    <label class="option"><input type="radio" name="q1" value="D"> D. Electron</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. Which state of matter has a definite shape and definite volume?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q2" value="A"> A. Gas</label>
+                    <label class="option"><input type="radio" name="q2" value="B"> B. Liquid</label>
+                    <label class="option"><input type="radio" name="q2" value="C"> C. Solid</label>
+                    <label class="option"><input type="radio" name="q2" value="D"> D. Plasma</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. When water turns into ice, what change occurs?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q3" value="A"> A. Chemical change</label>
+                    <label class="option"><input type="radio" name="q3" value="B"> B. Physical change</label>
+                    <label class="option"><input type="radio" name="q3" value="C"> C. No change</label>
+                    <label class="option"><input type="radio" name="q3" value="D"> D. Both A & B</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. A substance made of only one type of atom is called:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q4" value="A"> A. Compound</label>
+                    <label class="option"><input type="radio" name="q4" value="B"> B. Mixture</label>
+                    <label class="option"><input type="radio" name="q4" value="C"> C. Element</label>
+                    <label class="option"><input type="radio" name="q4" value="D"> D. Solution</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. Which of the following is a mixture?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q5" value="A"> A. Pure water</label>
+                    <label class="option"><input type="radio" name="q5" value="B"> B. Oxygen</label>
+                    <label class="option"><input type="radio" name="q5" value="C"> C. Saltwater</label>
+                    <label class="option"><input type="radio" name="q5" value="D"> D. Carbon dioxide</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. What do you call the substance that gets dissolved in a solution?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q6" value="A"> A. Solvent</label>
+                    <label class="option"><input type="radio" name="q6" value="B"> B. Solute</label>
+                    <label class="option"><input type="radio" name="q6" value="C"> C. Suspension</label>
+                    <label class="option"><input type="radio" name="q6" value="D"> D. Colloid</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. Which separation method uses filter paper to separate solids from liquids?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q7" value="A"> A. Evaporation</label>
+                    <label class="option"><input type="radio" name="q7" value="B"> B. Filtration</label>
+                    <label class="option"><input type="radio" name="q7" value="C"> C. Distillation</label>
+                    <label class="option"><input type="radio" name="q7" value="D"> D. Magnetism</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. The ability of a material to carry heat or electricity is called:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q8" value="A"> A. Solubility</label>
+                    <label class="option"><input type="radio" name="q8" value="B"> B. Conductivity</label>
+                    <label class="option"><input type="radio" name="q8" value="C"> C. Malleability</label>
+                    <label class="option"><input type="radio" name="q8" value="D"> D. Density</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. Which part of the cell is known as the "control center"?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q9" value="A"> A. Cytoplasm</label>
+                    <label class="option"><input type="radio" name="q9" value="B"> B. Cell membrane</label>
+                    <label class="option"><input type="radio" name="q9" value="C"> C. Nucleus</label>
+                    <label class="option"><input type="radio" name="q9" value="D"> D. Mitochondria</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. What is the basic unit of life?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q10" value="A"> A. Atom</label>
+                    <label class="option"><input type="radio" name="q10" value="B"> B. Molecule</label>
+                    <label class="option"><input type="radio" name="q10" value="C"> C. Cell</label>
+                    <label class="option"><input type="radio" name="q10" value="D"> D. Organ</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>11. Which organelle is found <strong>only</strong> in plant cells?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q11" value="A"> A. Nucleus</label>
+                    <label class="option"><input type="radio" name="q11" value="B"> B. Chloroplast</label>
+                    <label class="option"><input type="radio" name="q11" value="C"> C. Mitochondria</label>
+                    <label class="option"><input type="radio" name="q11" value="D"> D. Ribosome</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>12. A group of similar cells working together forms:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q12" value="A"> A. Organ</label>
+                    <label class="option"><input type="radio" name="q12" value="B"> B. Tissue</label>
+                    <label class="option"><input type="radio" name="q12" value="C"> C. Organ system</label>
+                    <label class="option"><input type="radio" name="q12" value="D"> D. Organism</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>13. Which of these is a prokaryotic cell?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q13" value="A"> A. Plant cell</label>
+                    <label class="option"><input type="radio" name="q13" value="B"> B. Animal cell</label>
+                    <label class="option"><input type="radio" name="q13" value="C"> C. Bacteria</label>
+                    <label class="option"><input type="radio" name="q13" value="D"> D. Fungi</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>14. What is the process by which plants make their own food?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q14" value="A"> A. Respiration</label>
+                    <label class="option"><input type="radio" name="q14" value="B"> B. Photosynthesis</label>
+                    <label class="option"><input type="radio" name="q14" value="C"> C. Digestion</label>
+                    <label class="option"><input type="radio" name="q14" value="D"> D. Fermentation</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>15. The main source of energy for all living things is:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q15" value="A"> A. Water</label>
+                    <label class="option"><input type="radio" name="q15" value="B"> B. Sun</label>
+                    <label class="option"><input type="radio" name="q15" value="C"> C. Oxygen</label>
+                    <label class="option"><input type="radio" name="q15" value="D"> D. Soil</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>16. A push or a pull acting on an object is called:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q16" value="A"> A. Energy</label>
+                    <label class="option"><input type="radio" name="q16" value="B"> B. Force</label>
+                    <label class="option"><input type="radio" name="q16" value="C"> C. Speed</label>
+                    <label class="option"><input type="radio" name="q16" value="D"> D. Motion</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>17. What is the unit used to measure force?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q17" value="A"> A. Joule</label>
+                    <label class="option"><input type="radio" name="q17" value="B"> B. Watt</label>
+                    <label class="option"><input type="radio" name="q17" value="C"> C. Newton</label>
+                    <label class="option"><input type="radio" name="q17" value="D"> D. Pascal</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>18. Which force pulls objects toward the center of the Earth?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q18" value="A"> A. Friction</label>
+                    <label class="option"><input type="radio" name="q18" value="B"> B. Magnetism</label>
+                    <label class="option"><input type="radio" name="q18" value="C"> C. Gravity</label>
+                    <label class="option"><input type="radio" name="q18" value="D"> D. Tension</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>19. Forces that are equal in size and opposite in direction are called:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q19" value="A"> A. Unbalanced forces</label>
+                    <label class="option"><input type="radio" name="q19" value="B"> B. Balanced forces</label>
+                    <label class="option"><input type="radio" name="q19" value="C"> C. Net forces</label>
+                    <label class="option"><input type="radio" name="q19" value="D"> D. Frictional forces</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>20. If an object is not moving, its speed is:</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q20" value="A"> A. Fast</label>
+                    <label class="option"><input type="radio" name="q20" value="B"> B. Slow</label>
+                    <label class="option"><input type="radio" name="q20" value="C"> C. Zero</label>
+                    <label class="option"><input type="radio" name="q20" value="D"> D. Constant</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>21. What is the nearest planet to the Sun?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q21" value="A"> A. Venus</label>
+                    <label class="option"><input type="radio" name="q21" value="B"> B. Mars</label>
+                    <label class="option"><input type="radio" name="q21" value="C"> C. Mercury</label>
+                    <label class="option"><input type="radio" name="q21" value="D"> D. Jupiter</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>22. Which planet is known as the "Red Planet"?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q22" value="A"> A. Venus</label>
+                    <label class="option"><input type="radio" name="q22" value="B"> B. Mars</label>
+                    <label class="option"><input type="radio" name="q22" value="C"> C. Saturn</label>
+                    <label class="option"><input type="radio" name="q22" value="D"> D. Uranus</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>23. How many days does it take for Earth to complete one revolution around the Sun?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q23" value="A"> A. 24 hours</label>
+                    <label class="option"><input type="radio" name="q23" value="B"> B. 365 days</label>
+                    <label class="option"><input type="radio" name="q23" value="C"> C. 30 days</label>
+                    <label class="option"><input type="radio" name="q23" value="D"> D. 12 months</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>24. What causes day and night?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q24" value="A"> A. Earth's revolution</label>
+                    <label class="option"><input type="radio" name="q24" value="B"> B. Earth's rotation</label>
+                    <label class="option"><input type="radio" name="q24" value="C"> C. Moon's orbit</label>
+                    <label class="option"><input type="radio" name="q24" value="D"> D. Sun's movement</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>25. Which body in space is Earth's only natural satellite?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q25" value="A"> A. Sun</label>
+                    <label class="option"><input type="radio" name="q25" value="B"> B. Mars</label>
+                    <label class="option"><input type="radio" name="q25" value="C"> C. Moon</label>
+                    <label class="option"><input type="radio" name="q25" value="D"> D. Asteroid</label>
+                </div>
+            </div>
+
+            <!-- QUESTIONS 26-30: True or False -->
+            <div class="question">
+                <p>26. Air is an example of matter.</p>
+                <div class="truefalse">
+                    <label class="option"><input type="radio" name="q26" value="T"> T - True</label>
+                    <label class="option"><input type="radio" name="q26" value="F"> F - False</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>27. Animal cells have a cell wall.</p>
+                <div class="truefalse">
+                    <label class="option"><input type="radio" name="q27" value="T"> T - True</label>
+                    <label class="option"><input type="radio" name="q27" value="F"> F - False</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>28. Friction slows down or stops moving objects.</p>
+                <div class="truefalse">
+                    <label class="option"><input type="radio" name="q28" value="T"> T - True</label>
+                    <label class="option"><input type="radio" name="q28" value="F"> F - False</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>29. The Sun is a star.</p>
+                <div class="truefalse">
+                    <label class="option"><input type="radio" name="q29" value="T"> T - True</label>
+                    <label class="option"><input type="radio" name="q29" value="F"> F - False</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>30. Melting is an example of a chemical change.</p>
+                <div class="truefalse">
+                    <label class="option"><input type="radio" name="q30" value="T"> T - True</label>
+                    <label class="option"><input type="radio" name="q30" value="F"> F - False</label>
+                </div>
+            </div>
+
+            <button onclick="submitQuiz()">📝 Submit Quiz</button>
+
+            <div id="score-display" class="result">
+                <h3>✅ Quiz Submitted!</h3>
+                <p>Your Score: <strong id="final-score"></strong> / 30</p>
+                <p id="grade-message"></p>
+                <p><em>Your score has been recorded. Thank you!</em></p>
+            </div>
+        </div>
+
+        <!-- 🔒 PRIVATE ADMIN PANEL — ONLY YOU SEE THIS -->
+        <div id="admin-panel" class="student-results">
+            <div class="admin-note">
+                <strong>🔒 ADMIN ONLY — Keep this pr
